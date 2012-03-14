@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>Démo Leaflet - OSM</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="http://code.leafletjs.com/leaflet-0.3.1/leaflet.css" />
+	<!--[if lte IE 8]>
+	    <link rel="stylesheet" href="http://code.leafletjs.com/leaflet-0.3.1/leaflet.ie.css" />
+	<![endif]-->
+    </head>
+    <body>
+	<div id="map" style="height: 200px; width: 800px;"></div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="http://code.leafletjs.com/leaflet-0.3.1/leaflet.js"></script>
+	<script src="osmLeaflet.jquery.js"></script>
+	<script>
+	    $(document).ready(function () {
+		$(document).osmLeaflet({
+		    target : 'map',
+		    zoom : 12,
+		    lattitude : 51.50,
+		    longitude : -0.09
+		}).osmLeaflet('addMarker', {lattitude : 51.50, longitude : -0.09}).osmLeaflet('addPopup', {lattitude : 51.51, longitude : -0.13, text : "Hey !"});
+	    });
+	</script>
+    </body>
+</html>
