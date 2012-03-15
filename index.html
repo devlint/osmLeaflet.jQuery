@@ -17,9 +17,9 @@
 	<div id="wrap" class="clearfix">
 	    <div id="map1" style="height: 216px; width: 960px;"></div>
 	    <div class="col_12">
-		<h3>Qu'est-ce que osmLeaflet.jQuery ?</h3>
+		<h4>Qu'est-ce que osmLeaflet.jQuery ?</h4>
 		<p>C'est un plugin jQuery qui vient vous aider à manipuler l'API de <a href="http://leaflet.cloudmade.com/" target="_blank" alt="Leaflet - a modern, lightweight JavaScript library for interactive maps by CloudMade" title="Leaflet - a modern, lightweight JavaScript library for interactive maps by CloudMade">Leaflet</a> pour afficher des cartes basées sur <a href="http://www.openstreetmap.org/" target="_blank" alt="OpenStreetMap" title="OpenStreetMap">Open Street Map</a>.</p>
-		<h3>Capacités</h3>
+		<h4>Capacités</h4>
 		<div class="col_4">
 		    <ul class="checks">
 			<li>Instances multiples</li>
@@ -42,7 +42,7 @@
 		<div class="facebook-box">
 		    <iframe src="http://www.facebook.com/plugins/likebox.php?id=124128901045591&amp;width=220&amp;connections=10&amp;stream=false&amp;header=false&amp;height=300" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:220px; height:300px;" allowtransparency="true"></iframe>
 		</div>
-		<h3>Démonstration</h3>
+		<h4>Démonstration</h4>
 		<ul class="tabs">
 		    <li class="first current"><a href="#media-example">Exemple</a></li>
 		    <li class=""><a href="#media-code">Code</a></li>
@@ -63,8 +63,94 @@ $(document).osmLeaflet({
     text : 'Hello !'
 });</pre>
 		</div>
-	    </div>
-	    <div class="col_12">
+		<h4>Méthodes disponibles</h4>
+		<table class="striped" cellspacing="0" cellpadding="0">
+		    <thead>
+			<tr class="alt first last">
+			    <th>&nbsp;</th>
+			    <th>Description</th>
+			</tr>
+		    </thead>
+		    <tbody>
+			<tr class="first">
+			    <th>Méthode</th>
+			    <td>Équivaut à <i>init</i></td>
+			</tr>
+			<tr class="alt">
+			    <th>init</th>
+			    <td>Permet de mettre en place la carte. Appelée par défaut si pas de paramètres.<br /><br />Prend les options suivantes :<ul>
+				    <li>latitude</li>
+				    <li>longitude</li>
+				    <li>target</li>
+				    <li>zoom</li>
+				</ul>
+			    </td>
+			</tr>
+			<tr>
+			    <th>addMarker</th>
+			    <td>Permet de placer un pointeur sur la carte.<br /><br />Prend les options suivantes :<ul>
+				    <li>latitude</li>
+				    <li>longitude</li>
+				</ul>
+			    </td>
+			</tr>
+			<tr class="alt last">
+			    <th>addPopup</th>
+			    <td>Permet de placer une infobulle sur la carte.<br /><br />Prend les options suivantes :<ul>
+				    <li>latitude</li>
+				    <li>longitude</li>
+				    <li>tex</li>
+				</ul>
+			    </td>
+			</tr>
+		    </tbody>
+		</table>
+		<br />
+		<h4>Options</h4>
+		<table class="striped" cellspacing="0" cellpadding="0">
+		    <thead>
+			<tr class="alt first last">
+			    <th>Nom</th>
+			    <th>Type</th>
+			    <th>Obligatoire</th>
+			    <th>Description</th>
+			</tr>
+		    </thead>
+		    <tbody>
+			<tr class="first">
+			    <th>target</th>
+			    <td>Chaîne</td>
+			    <td>Oui</td>
+			    <td>Id de l'élément qui contiendra la carte.</td>
+			</tr>
+			<tr class="alt">
+			    <th>zoom</th>
+			    <td>Nombre</td>
+			    <td>Non</td>
+			    <td>Niveau de zoom de la carte. Compris entre 1 et 18.</td>
+			</tr>
+			<tr>
+			    <th>latitude</th>
+			    <td>Nombre</td>
+			    <td>Non</td>
+			    <td>Latitude de la position de la carte ou de l'élément que vous souhaitez positionner.</td>
+			</tr>
+			<tr class="alt">
+			    <th>longitude</th>
+			    <td>Nombre</td>
+			    <td>Non</td>
+			    <td>Longitude de la position de la carte ou de l'élément que vous souhaitez positionner.</td>
+			</tr>
+			<tr class="alt last">
+			    <th>text</th>
+			    <td>Chaîne</td>
+			    <td>Non</td>
+			    <td>Contenu textuel de l'élément que vous souhaitez positionner.</td>
+			</tr>
+		    </tbody>
+		</table>
+		<br />
+		<h4>Suivre</h4>
 		<a href="https://github.com/MathRobin/osmLeaflet.jQuery" alt="Github" title="Github"><span class="icon social large blue" data-icon="i" title="Github" style="display: inline-block; "></span></a>
 		<a href="http://www.facebook.com/PluginOsmLeafletjQuery/" alt="Facebook" title="Facebook"><span class="icon social x-large blue" data-icon="F"></span></a>
 		<a class="button orange small" href="http://www.mathieurobin.com/tag/osmleaflet-jquery/feed/" alt="Flux RSS" title="Flux RSS"><span class="icon social" data-icon="r" style="display: inline-block; "></span> RSS</a>
