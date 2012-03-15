@@ -2,7 +2,7 @@
     var defaults = {
 	zoom : 10,
 	maxZoom : 18,
-	lattitude : 0,
+	latitude : 0,
 	longitude : 0,
 	cloudmadeAttribution : 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade, osmLeaflet.jQuery by Mathieu ROBIN'
     },
@@ -22,12 +22,12 @@
 		    attribution: settings.cloudmadeAttribution
 		});
 
-		map.setView(new L.LatLng(settings.lattitude, settings.longitude), settings.zoom).addLayer(cloudmade);
+		map.setView(new L.LatLng(settings.latitude, settings.longitude), settings.zoom).addLayer(cloudmade);
 	    });
 	},
 	addMarker : function (options) {
 	    return this.each(function () {
-		var markerLocation = new L.LatLng(options.lattitude, options.longitude);
+		var markerLocation = new L.LatLng(options.latitude, options.longitude);
 
 		var marker = new L.Marker(markerLocation);
 		map.addLayer(marker);
@@ -37,7 +37,7 @@
 	    return this.each(function () {
 		var popup = new L.Popup();
 
-		popup.setLatLng(new L.LatLng(options.lattitude, options.longitude));
+		popup.setLatLng(new L.LatLng(options.latitude, options.longitude));
 		popup.setContent(options.text);
 
 		map.openPopup(popup);
