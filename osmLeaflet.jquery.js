@@ -14,7 +14,7 @@
 		if(options) {
 		    settings = $.extend(defaults, options);
 		}
-		map = new L.Map(settings.target);
+		map = new L.Map(this.id);
 
 		var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png',
 		cloudmade = new L.TileLayer(cloudmadeUrl, {
@@ -38,7 +38,7 @@
 		var popup = new L.Popup();
 
 		popup.setLatLng(new L.LatLng(options.latitude, options.longitude));
-		popup.setContent(options.text);
+		popup.setContent(options.content);
 
 		map.openPopup(popup);
 	    });
